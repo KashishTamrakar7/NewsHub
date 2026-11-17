@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NewsHub — the stories shaping your world." />
+  <meta name="theme-color" content="#f7f8fa" />
+  <title>NewsHub — Stay curious. Stay informed.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-strip"><span class="live-dot"></span> YOUR DAILY BRIEFING <span class="strip-divider">/</span> INDEPENDENTLY CURATED, GLOBALLY SOURCED</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="NewsHub home"><span class="brand-mark">N</span><span>news<span class="brand-accent">hub</span><small>THE WORLD, IN CONTEXT</small></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#" data-category="top">For you</a>
+      <a class="nav-link" href="#" data-category="technology">Technology</a>
+      <a class="nav-link" href="#" data-category="business">Business</a>
+      <a class="nav-link" href="#" data-category="science">Science</a>
+      <a class="nav-link" href="#" data-category="sports">Sports</a>
+      <a class="nav-link" href="#" data-category="entertainment">Culture</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">☾</button>
+      <button class="menu-btn" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro-row">
+      <div><p class="eyebrow" id="todayLabel">YOUR DAILY BRIEFING</p><h1>Stay curious.<br><span>Stay informed.</span></h1><p class="intro-copy">The stories shaping your world, gathered in one thoughtful place.</p></div>
+      <div class="edition-card"><span class="edition-label">YOUR EDITION</span><strong>India <span>↗</span></strong><small>English · Latest updates</small><select id="countrySelect" aria-label="Choose country"><option value="in">India</option><option value="us">United States</option><option value="gb">United Kingdom</option><option value="ca">Canada</option><option value="au">Australia</option><option value="sg">Singapore</option><option value="ae">UAE</option><option value="nz">New Zealand</option></select></div>
+    </section>
+
+    <section class="toolbar">
+      <div class="section-heading"><span class="section-kicker">01</span><h2>Today’s headlines</h2><span class="heading-line"></span><span class="live-label"><i></i> LATEST FEED</span></div>
+      <form class="search-form" id="searchForm"><span>⌕</span><input id="searchInput" type="search" placeholder="Search stories, topics, keywords..." autocomplete="off"><button type="submit">Search <b>→</b></button></form>
+    </section>
+
+    <div class="category-row" id="categoryRow" aria-label="News categories">
+      <button class="category-chip selected" data-category="top">All stories</button>
+      <button class="category-chip" data-category="technology">Technology</button>
+      <button class="category-chip" data-category="business">Business</button>
+      <button class="category-chip" data-category="science">Science</button>
+      <button class="category-chip" data-category="health">Health</button>
+      <button class="category-chip" data-category="sports">Sports</button>
+      <button class="category-chip" data-category="entertainment">Entertainment</button>
+      <button class="category-chip" data-category="politics">Politics</button>
+    </div>
+
+    <section id="statusArea" class="status-area" aria-live="polite"></section>
+    <section id="featuredArea" class="featured-area"></section>
+
+    <section class="feed-section">
+      <div class="feed-title"><div><p class="eyebrow">THE LATEST</p><h2 id="feedHeading">More stories for you</h2></div><span id="resultCount" class="result-count"></span></div>
+      <div id="newsGrid" class="news-grid"></div>
+      <div class="load-more-wrap"><button id="loadMoreBtn" class="load-more" hidden>Load more stories <span>↓</span></button></div>
+    </section>
+
+    <section class="newsletter">
+      <div><p class="eyebrow">A BETTER WAY TO KEEP UP</p><h2>Stay in the know.<br><em>Not in the noise.</em></h2><p>Thoughtful headlines, one scroll at a time.</p></div>
+      <div class="newsletter-note"><span class="newsletter-icon">✳</span><strong>Your world.<br>Well read.</strong><small>NewsHub · Daily edition</small></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="#"><span class="brand-mark">N</span> news<span class="brand-accent">hub</span></a><p>Stay curious. Stay informed.</p><small>News headlines and summaries are provided by their respective publishers. Read the full story on the original source.</small><span class="copyright">© <span id="year"></span> NewsHub · Built for curious minds.</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
